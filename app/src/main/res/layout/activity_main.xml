@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Number 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textVariable1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/Number1"
+        app:layout_constraintStart_toStartOf="@+id/Number1"
+        app:layout_constraintTop_toBottomOf="@+id/Number1" />
+
+    <TextView
+        android:id="@+id/Number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Number 2"
+        app:layout_constraintEnd_toEndOf="@+id/textVariable1"
+        app:layout_constraintStart_toStartOf="@+id/textVariable1"
+        app:layout_constraintTop_toBottomOf="@+id/textVariable1" />
+
+    <EditText
+        android:id="@+id/textVariable2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="0.0"
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/Number2"
+        app:layout_constraintStart_toStartOf="@+id/Number2"
+        app:layout_constraintTop_toBottomOf="@+id/Number2" />
+
+    <Button
+        android:id="@+id/bAdd"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/textVariable2"
+        app:layout_constraintTop_toBottomOf="@+id/textVariable2" />
+
+    <Button
+        android:id="@+id/bSubtract"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/bAdd"
+        app:layout_constraintTop_toTopOf="@+id/bAdd" />
+
+    <Button
+        android:id="@+id/bDivide"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:text="÷"
+        app:layout_constraintStart_toEndOf="@+id/bSubtract"
+        app:layout_constraintTop_toTopOf="@+id/bSubtract" />
+
+    <Button
+        android:id="@+id/bMultiply"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:text="×"
+        app:layout_constraintStart_toEndOf="@+id/bDivide"
+        app:layout_constraintTop_toTopOf="@+id/bDivide" />
+
+    <TextView
+        android:id="@+id/Equals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="172dp"
+        android:text="="
+        app:layout_constraintEnd_toEndOf="@+id/bMultiply"
+        app:layout_constraintTop_toBottomOf="@+id/bMultiply" />
+
+    <TextView
+        android:id="@+id/txtAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Answer"
+        app:layout_constraintStart_toEndOf="@+id/Equals"
+        app:layout_constraintTop_toTopOf="@+id/Equals" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
